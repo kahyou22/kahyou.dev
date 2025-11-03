@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  width: 100vw;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  width: 1060px;
+  padding-inline: 20px;
+}
