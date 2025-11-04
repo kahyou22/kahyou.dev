@@ -21,6 +21,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={pretendard.className}>
+        <header>
+          <nav></nav>
+        </header>
         <div className="main-wrapper">
           <main>{children}</main>
         </div>

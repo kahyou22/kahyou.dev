@@ -1,16 +1,4 @@
-body {
-  margin: 0;
-  width: 100vw;
-}
+@layer theme, layout;
 
-.main-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-main {
-  width: 1060px;
-  padding-inline: 20px;
-}
+@import "./../styles/theme.css";
+@import "./../styles/layout.css";
