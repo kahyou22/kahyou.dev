@@ -1,5 +1,4 @@
-@layer reset, theme, layout;
+@layer theme, layout;
 
-@import "./../styles/reset.css";
 @import "./../styles/theme.css";
 @import "./../styles/layout.css";
