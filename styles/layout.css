@@ -27,11 +27,32 @@
   nav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     max-width: var(--layout-width);
     padding-inline: var(--layout-spacing);
+  }
+
+  nav .left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  nav .right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
   .main-wrapper {

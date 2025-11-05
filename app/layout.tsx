@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 
+import Header from "@/components/Header";
+
 export const metadata: Metadata = {
   title: "테스트",
   description: "테스트",
@@ -21,9 +23,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={pretendard.className}>
-        <header>
-          <nav></nav>
-        </header>
+        <Header />
         <div className="main-wrapper">
           <main>{children}</main>
         </div>
