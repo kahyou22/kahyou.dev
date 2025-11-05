@@ -9,6 +9,13 @@ export interface PostMeta {
   slug: string;
 }
 
+export interface Post {
+  title: string;
+  date: Date;
+  slug: string;
+  Content: React.ComponentType;
+}
+
 export function getAllPostSlugs(): string[] {
   const posts = sync("**/*.mdx", { cwd: "contents" });
 
@@ -38,4 +45,16 @@ export function getAllPostMetas(): PostMeta[] {
   metas.sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return metas;
+}
+
+export async function getPostBySlug(slug: string): Promise<Post> {
+  const mod = await import(`@/contents/${slug}.mdx`);
+  const { default: Content, meta } = mod;
+
+  return {
+    title: meta.title,
+    date: new Date(meta.date),
+    slug: slug,
+    Content: Content,
+  };
 }

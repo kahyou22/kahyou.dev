@@ -1,4 +1,5 @@
 import { getAllPostMetas, PostMeta } from "@/lib/post";
+import { formatPostDate } from "@/lib/utils";
 
 export default function BlogPage() {
   const posts: PostMeta[] = getAllPostMetas();
@@ -9,7 +10,7 @@ export default function BlogPage() {
         {posts.map((post) => (
           <li key={post.slug}>
             <div>{post.title}</div>
-            <div>{post.date.toLocaleDateString("ko-KR")}</div>
+            <div>{formatPostDate(post.date)}</div>
             <div>{post.slug}</div>
           </li>
         ))}
