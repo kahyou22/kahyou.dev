@@ -16,6 +16,10 @@
   font-weight: bold;
 }
 
+.about p {
+  margin-block: 1.5rem;
+}
+
 .about ul {
   padding-left: 0.5rem;
 }
