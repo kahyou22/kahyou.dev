@@ -16,6 +16,22 @@ const pretendard = localFont({
   src: "./../fonts/PretendardVariable.woff2",
   display: "swap",
   weight: "45 920",
+  variable: "--font-pretendard",
+  fallback: [
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "system-ui",
+    "Roboto",
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "sans-serif",
+  ],
 });
 
 export default function RootLayout({
@@ -24,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={pretendard.variable}>
       <body className={pretendard.className}>
         <Header />
         <div className="main-wrapper">
