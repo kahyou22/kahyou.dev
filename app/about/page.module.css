@@ -4,26 +4,7 @@
   line-height: 1.6;
 }
 
-.about h2 {
-  margin-block: 2rem 0.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.about h3 {
-  margin-block: 2rem 0.5rem;
-  font-size: 1.17rem;
-  font-weight: bold;
-}
-
-.about p {
-  margin-block: 1.5rem;
-}
-
 .about ul {
+  list-style: none;
   padding-left: 0.5rem;
-}
-
-.about ul ul {
-  padding-left: 1rem;
 }
