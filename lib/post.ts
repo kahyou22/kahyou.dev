@@ -11,6 +11,7 @@ export interface PostMeta {
 
 export interface Post {
   title: string;
+  description?: string;
   date: Date;
   slug: string;
   Content: React.ComponentType;
