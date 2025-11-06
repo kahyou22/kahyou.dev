@@ -5,7 +5,10 @@ import localFont from "next/font/local";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "테스트",
+  title: {
+    default: "블로그",
+    template: "%s | 블로그",
+  },
   description: "테스트",
 };
 

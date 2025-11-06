@@ -1,5 +1,6 @@
 import { getAllPostSlugs, getPostBySlug } from "@/lib/post";
 import { formatPostDate } from "@/lib/utils";
+import { Metadata } from "next";
 
 export function generateStaticParams() {
   const posts: string[] = getAllPostSlugs();
@@ -14,6 +15,24 @@ type PageProps = {
     slug: string;
   }>;
 };
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: "글을 찾을 수 없음",
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.description || post.title,
+  };
+}
 
 export default async function Page({ params }: PageProps) {
   const { slug } = await params;
