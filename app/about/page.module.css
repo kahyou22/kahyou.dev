@@ -4,6 +4,11 @@
   line-height: 1.6;
 }
 
+.about h2,
+.about h3 {
+  margin-top: 3rem;
+}
+
 .about ul {
   list-style: none;
   padding-left: 0.5rem;
