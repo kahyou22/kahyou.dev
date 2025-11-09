@@ -1,15 +1,3 @@
 .about {
-  max-width: 768px;
-  font-size: 1.125rem;
-  line-height: 1.6;
-}
-
-.about h2,
-.about h3 {
-  margin-top: 3rem;
-}
-
-.about ul {
-  list-style: none;
-  padding-left: 0.5rem;
+  max-width: calc(768px - var(--layout-spacing) * 2);
 }
