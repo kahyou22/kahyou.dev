@@ -1,6 +1,7 @@
 .md-body {
   font-size: var(--text-lg);
-  line-height: 2rem;
+  line-height: 1.6;
+  word-break: keep-all;
 }
 
 .md-body h1,
@@ -40,7 +41,7 @@
 
 .md-body p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .md-body strong {
