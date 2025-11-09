@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 export default function Header() {
   return (
@@ -11,8 +12,16 @@ export default function Header() {
             <h1>블로그</h1>
           </a>
           <div className="menu">
-            <Link href="/blog">blog</Link>
-            <Link href="/about">about</Link>
+            <Link href="/blog">
+              <Button variant="ghost" size="sm">
+                Blog
+              </Button>
+            </Link>
+            <Link href="/about">
+              <Button variant="ghost" size="sm">
+                About
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="right">.</div>
