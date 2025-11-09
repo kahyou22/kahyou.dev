@@ -46,3 +46,29 @@
 .md-body strong {
   font-weight: 650;
 }
+
+.md-body code,
+.md-body pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: var(--text-sm);
+  background-color: var(--color-muted);
+  border-radius: var(--radius);
+  line-height: 1.6;
+}
+
+.md-body code {
+  padding: 0.2rem 0.4rem;
+}
+
+.md-body pre {
+  padding: 1rem;
+}
+
+.md-body pre code {
+  padding: 0;
+}
+
+.md-body a {
+  text-decoration: underline;
+}
