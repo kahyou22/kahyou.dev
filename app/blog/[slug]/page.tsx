@@ -1,6 +1,7 @@
 import { getAllPostSlugs, getPostBySlug } from "@/lib/post";
 import { formatPostDate } from "@/lib/utils";
 import { Metadata } from "next";
+import "@/styles/markdown.css";
 
 export function generateStaticParams() {
   const posts: string[] = getAllPostSlugs();
@@ -39,7 +40,7 @@ export default async function Page({ params }: PageProps) {
   const post = await getPostBySlug(slug);
   const Content = post.Content;
   return (
-    <div>
+    <div className="md-body">
       <h1>{post.title}</h1>
       <div>{formatPostDate(post.date)}</div>
       <div>{post.slug}</div>
