@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import Button from "./Button";
 import { Sun, Moon, MonitorCog, Check } from "lucide-react";
 import {
@@ -57,6 +57,8 @@ export default function ThemePicker() {
   const [theme, setTheme] = useState<AppliedThemeId>("light");
   const [selected, setSelected] = useState<ThemeId>("system");
   const [open, setOpen] = useState<boolean>(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
   useLayoutEffect(() => {
     initTheme();
     setTheme(getAppliedTheme());
@@ -69,7 +71,19 @@ export default function ThemePicker() {
           setTheme(getAppliedTheme());
         }
       });
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (wrapperRef.current?.contains(event.target as Node)) return;
+      close();
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
+
+  const close = () => setOpen(false);
 
   const toggle = () => setOpen((v) => !v);
 
@@ -77,13 +91,13 @@ export default function ThemePicker() {
     changeTheme(id);
     setTheme(getAppliedTheme());
     setSelected(id);
-    setOpen(false);
+    close();
   };
 
   return (
     <>
       <DangerThemeScript />
-      <div className={styles.wrapper}>
+      <div ref={wrapperRef} className={styles.wrapper}>
         <Button variant="ghost" iconOnly onClick={toggle}>
           {themes.map((t) => {
             if (t.id === theme) {
