@@ -73,7 +73,7 @@
 
     &:hover {
       background-color: color-mix(
-        in oklch,
+        in oklab,
         var(--bg-color) var(--hover-mix-rate),
         transparent
       );
