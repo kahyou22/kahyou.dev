@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
+import ThemePicker from "./ThemePicker";
 
 export default function Header() {
   return (
@@ -24,7 +25,9 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        <div className="right">.</div>
+        <div className="right">
+          <ThemePicker />
+        </div>
       </nav>
     </header>
   );
