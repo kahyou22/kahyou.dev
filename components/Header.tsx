@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import ThemePicker from "./ThemePicker";
+import Logo from "@/public/logo.svg";
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
       <nav>
         <div className="left">
           <a className="title" href="/">
-            <Image src="/logo.svg" alt="logo" width={22} height={22} preload />
+            <Logo height={22} />
             <h1>블로그</h1>
           </a>
           <div className="menu">
