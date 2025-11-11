@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/hooks/ThemeContext";
 
 export const metadata: Metadata = {
   title: {
@@ -42,10 +43,12 @@ export default function RootLayout({
   return (
     <html lang="ko" className={pretendard.variable} suppressHydrationWarning>
       <body className={pretendard.className}>
-        <Header />
-        <div className="main-wrapper">
-          <main>{children}</main>
-        </div>
+        <ThemeProvider>
+          <Header />
+          <div className="main-wrapper">
+            <main>{children}</main>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
