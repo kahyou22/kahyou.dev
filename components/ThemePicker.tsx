@@ -51,7 +51,7 @@ export default function ThemePicker() {
   return (
     <>
       <div ref={wrapperRef} className={styles.wrapper}>
-        <Button variant="ghost" iconOnly onClick={toggle}>
+        <Button variant="ghost" size="sm" iconOnly onClick={toggle}>
           {themes.map((t) => {
             if (t.id === appliedThemeId) {
               const Icon = t.icon;
