@@ -2,6 +2,7 @@ import AboutInfo from "./about.mdx";
 import "@/styles/markdown.css";
 import style from "./page.module.css";
 import GithubLogo from "@/public/github.svg";
+import GmailLogo from "@/public/gmail.svg";
 import { Mail } from "lucide-react";
 
 import { Metadata } from "next";
@@ -19,7 +20,7 @@ export default function About() {
       <h4 className="title">아마추어 소프트웨어 엔지니어</h4>
       <div className="links">
         <a href="mailto:kahyou222@gmail.com">
-          <Mail width={34} height={34} />
+          <GmailLogo height={32} />
         </a>
         <a href="https://github.com/kahyou22" target="_blank">
           <GithubLogo width={33} height={32} />
