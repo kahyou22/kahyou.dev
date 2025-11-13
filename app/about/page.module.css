@@ -53,6 +53,10 @@
   background-color: var(--color-muted);
 }
 
+.about :global(.avatar-wrapper img) {
+  transition-property: transform;
+}
+
 .about :global(.avatar-wrapper:hover img) {
   transform: scale(1.05);
 }
