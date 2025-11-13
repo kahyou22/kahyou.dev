@@ -28,6 +28,7 @@
 .about :global(.links a) {
   display: flex;
   align-items: center;
+  aspect-ratio: 1/1;
 }
 
 .about hr {
