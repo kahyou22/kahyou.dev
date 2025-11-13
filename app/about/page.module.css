@@ -54,6 +54,19 @@
   background-color: var(--color-muted);
 }
 
+.about :global(.avatar-wrapper img) {
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+}
+
 .about :global(.avatar-wrapper:hover img) {
   transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .about :global(.avatar-wrapper) {
+    width: 150px;
+    height: 150px;
+  }
 }
