@@ -22,7 +22,7 @@ export default function About() {
           <Mail width={34} height={34} />
         </a>
         <a href="https://github.com/kahyou22" target="_blank">
-          <GithubLogo height={32} />
+          <GithubLogo width={33} height={32} />
         </a>
       </div>
       <hr />
