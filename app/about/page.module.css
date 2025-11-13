@@ -25,6 +25,11 @@
   gap: 0.625rem;
 }
 
+.about :global(.links a) {
+  display: flex;
+  align-items: center;
+}
+
 .about hr {
   width: 100%;
   margin-top: 1.5rem;
