@@ -1,7 +1,7 @@
 import AboutInfo from "./about.mdx";
 import "@/styles/markdown.css";
 import style from "./page.module.css";
-import GithubLogo from "@/public/github-mark.svg";
+import GithubLogo from "@/public/github.svg";
 import { Mail } from "lucide-react";
 
 import { Metadata } from "next";
