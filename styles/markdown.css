@@ -16,27 +16,27 @@
 }
 
 .md-body h1 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 .md-body h2 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 .md-body h3 {
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 .md-body h4 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .md-body h5 {
-  font-size: 0.875rem;
+  font-size: 0.875em;
 }
 
 .md-body h6 {
-  font-size: 0.85rem;
+  font-size: 0.85em;
 }
 
 .md-body p {
