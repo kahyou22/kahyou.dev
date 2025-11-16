@@ -12,31 +12,31 @@
 .md-body h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .md-body h1 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .md-body h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .md-body h3 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 .md-body h4 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .md-body h5 {
-  font-size: 0.875em;
+  font-size: 0.875rem;
 }
 
 .md-body h6 {
-  font-size: 0.85em;
+  font-size: 0.85rem;
 }
 
 .md-body p {
