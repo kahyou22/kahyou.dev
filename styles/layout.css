@@ -50,7 +50,7 @@
   nav .left {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   nav .title {
@@ -69,6 +69,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
+  }
+
+  nav .menu button {
+    font-size: 1rem;
   }
 
   nav .right {
