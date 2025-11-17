@@ -1,0 +1,23 @@
+.post {
+  width: 100%;
+  max-width: calc(768px - var(--layout-spacing) * 2);
+}
+
+.post :global(.header) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: var(--layout-spacing);
+  margin-bottom: var(--layout-spacing);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.post :global(.header) time {
+  color: var(--color-muted-foreground);
+}
+
+.post :global(.header) h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
