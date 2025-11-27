@@ -6,6 +6,7 @@ export interface PostMeta {
   title: string;
   description?: string;
   date: Date;
+  tags: string[];
   slug: string;
 }
 
@@ -13,6 +14,7 @@ export interface Post {
   title: string;
   description?: string;
   date: Date;
+  tags: string[];
   slug: string;
   Content: React.ComponentType;
 }
@@ -35,6 +37,7 @@ export function getPostMetaBySlug(slug: string): PostMeta {
   return {
     title: data.title,
     date: data.date,
+    tags: data.tags || [],
     slug: slug,
   };
 }
@@ -55,6 +58,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
   return {
     title: meta.title,
     date: new Date(meta.date),
+    tags: meta.tags || [],
     slug: slug,
     Content: Content,
   };
