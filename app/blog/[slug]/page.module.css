@@ -10,11 +10,40 @@
   align-items: center;
   padding-bottom: var(--layout-spacing);
   margin-bottom: var(--layout-spacing);
-  border-bottom: 1px solid var(--color-border);
+  /* border-bottom: 1px solid var(--color-border); */
 }
 
-.post :global(.header) time {
+.post :global(.header .list) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+  font-size: var(--text-sm);
   color: var(--color-muted-foreground);
+}
+
+.post :global(.header .list > *) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post :global(.header .list > *:not(:first-child)::before) {
+  content: "";
+  margin-right: 0.5rem;
+}
+
+.post :global(.header .list.div > *:not(:first-child)::before) {
+  content: "|";
+}
+
+.post :global(.header .list svg) {
+  width: 1rem;
+  height: 1rem;
 }
 
 .post :global(.header) h1 {

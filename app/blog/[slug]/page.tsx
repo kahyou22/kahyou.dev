@@ -4,6 +4,8 @@ import { Metadata } from "next";
 import "@/styles/markdown.css";
 import styles from "./page.module.css";
 
+import { Tags } from "lucide-react";
+
 export function generateStaticParams() {
   const posts: string[] = getAllPostSlugs();
 
@@ -43,10 +45,21 @@ export default async function Page({ params }: PageProps) {
   return (
     <div className={`${styles.post}`}>
       <div className="header">
-        <time dateTime={post.date.toISOString()}>
-          {formatPostDate(post.date)}
-        </time>
         <h1>{post.title}</h1>
+        <div className="list div">
+          <span>정문주</span>
+          <time dateTime={post.date.toISOString()}>
+            {formatPostDate(post.date)}
+          </time>
+        </div>
+        <ul className="list">
+          <li>
+            <Tags />
+          </li>
+          {post.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
       </div>
       <article className="md-body">
         <Content />
